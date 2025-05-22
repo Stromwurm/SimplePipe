@@ -74,6 +74,17 @@ public class LocalServer : IDisposable
         _pipeIn.Dispose();
     }
 
+    public string[] GetPipeHandles()
+    {
+        string[] handles = [_pipeIn.GetClientHandleAsString(), _pipeOut.GetClientHandleAsString()];
+    }
+
+    public void DisposeLocalCopyOfClientHandle()
+    {
+        _pipeIn.DisposeLocalCopyOfClientHandle();
+        _pipeOut.DisposeLocalCopyOfClientHandle();
+    }
+    
     public LocalClient GetClient()
     {
         LocalClient lc = new(_pipeOut.GetClientHandleAsString(), _pipeIn.GetClientHandleAsString());
