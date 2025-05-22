@@ -74,6 +74,15 @@ public class LocalServer : IDisposable
         _pipeIn.Dispose();
     }
 
+    /// <summary>
+    /// Watch out when assigning the handles to the client. The PipeIn from the server needs to be assigned to PipeOut from the client and vice versa.
+    /// </summary>
+    /// <returns>
+    ///     <list type="number">
+    ///         <item>PipeIn</item>
+    ///         <item>PipeOut</item>
+    ///     </list>
+    /// </returns>
     public string[] GetPipeHandles()
     {
         string[] handles = [_pipeIn.GetClientHandleAsString(), _pipeOut.GetClientHandleAsString()];
