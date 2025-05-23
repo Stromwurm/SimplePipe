@@ -4,6 +4,24 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>SimplePipe</Title>
+    <Authors>Stromwurm</Authors>
+    <Company>Stromwurm</Company>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/Stromwurm/SimplePipe</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Stromwurm/SimplePipe</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Pipe; Pipes; IPC</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Description>Simple convenience wrapper for anonymous pipes in .NET</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
