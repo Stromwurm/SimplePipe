@@ -17,3 +17,6 @@ NOTE:
 5. Call 'Listen' method on each instances, or only one if you do not need to listen on both. Consider wrapping that call in a 'Task.Run(instance.Listen)' to make it run async.
 6. Call 'Write' method to write to the other side.
 7. Any messages received by either side will trigger a 'NewMessage' event on the respective side. In the server, the event data is a 'ClientMessage' instance, in the client it is a 'ServerMessage' instance.
+
+## V 1.1.0
+Added the necessity to include a message type integer in the message. The first 6 characters of the message will be parsed as int. Their values can be found in the 'MessageType' property in the instances of 'ServerMessage' and 'ClientMessage'.
