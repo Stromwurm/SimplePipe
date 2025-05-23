@@ -3,10 +3,13 @@
 public record ServerMessage
 {
     public DateTime ReceivedAt { get; init; } = DateTime.UtcNow;
+    public int MessageType { get; init; }
     public string Message { get; init; }
 
     public ServerMessage(string message)
     {
-        Message = message;
+        Message = message[5..^0];
+        MessageType = int.Parse(message[0..5]);
+
     }
 }
