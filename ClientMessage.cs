@@ -8,7 +8,7 @@ public record ClientMessage
 
     public ClientMessage(string message)
     {
-        Message = message[6..^1];
+        Message = message[6..^0];
         MessageType = int.Parse(message[0..6]);
 
     }
