@@ -15,6 +15,7 @@
     <PackageTags>Pipe; Pipes; IPC</PackageTags>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Description>Simple convenience wrapper for anonymous pipes in .NET</Description>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

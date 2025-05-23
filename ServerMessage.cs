@@ -8,8 +8,8 @@ public record ServerMessage
 
     public ServerMessage(string message)
     {
-        Message = message[5..^0];
-        MessageType = int.Parse(message[0..5]);
+        Message = message[6..^1];
+        MessageType = int.Parse(message[0..6]);
 
     }
 }
